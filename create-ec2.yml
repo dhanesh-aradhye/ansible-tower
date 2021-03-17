@@ -16,7 +16,7 @@
           region: "{{ REGION }}"
           wait: yes
           count: 1
-          vpc_subnet_id: VPC_SUBNET_ID
+          vpc_subnet_id: "{{ VPC_SUBNET_ID }}"
           assign_public_ip: no
           instance_tags:
             Name: via-ansible-tower
