@@ -10,7 +10,7 @@
     tasks:
       - name: Creating the ec2 instance using vars
         ec2:
-          key_name: KEY_NAME
+          key_name: "{{ KEY_NAME }}"
           instance_type: t2.micro
           image: "{{ EC2_IMAGE }}"
           region: us-east-2
