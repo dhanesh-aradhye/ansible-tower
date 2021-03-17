@@ -1,0 +1,18 @@
+---
+  - name: Test ansible Towe ec2 create
+    hosts: local
+    connection: local
+
+    tasks:
+      - name: Creating the ec2 instance
+        ec2:
+          key_name: aws-instance-ansible
+          instance_type: t2.micro
+          image: ami-09246ddb00c7c4fef
+          region: us-east-2
+          wait: yes
+          count: 1
+          vpc_subnet_id: subnet-71323519
+          assign_public_ip: no
+          instance_tags:
+            Name: via-ansible-tower
