@@ -5,10 +5,10 @@
 
     tasks:
       - name: Creating the ec2 instance using vars
-          auth:
-            aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
-            aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
-            aws_ec2_region: "{{ REGION }}"
+        auth:
+          aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+          aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+          aws_ec2_region: "{{ REGION }}"
         ec2:
           key_name: KEY_NAME
           instance_type: t2.micro
