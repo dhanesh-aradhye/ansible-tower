@@ -2,14 +2,14 @@
   - name: Test ansible Tower ec2 create
     hosts: local
     connection: local
+    environment:
+      aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+      aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+      region: "{{ REGION }}"
 
     tasks:
       - name: Creating the ec2 instance using vars
         ec2:
-          auth:
-            aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
-            aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
-            region: "{{ REGION }}"
           key_name: KEY_NAME
           instance_type: t2.micro
           image: EC2_IMAGE
