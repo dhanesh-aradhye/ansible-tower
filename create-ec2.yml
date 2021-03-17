@@ -12,9 +12,9 @@
         ec2:
           key_name: KEY_NAME
           instance_type: t2.micro
-          image: EC2_IMAGE
+          image: "{{ EC2_IMAGE }}"
+          region: us-east-2
           wait: yes
-#          region: us-east-2
           count: 1
           vpc_subnet_id: "{{ VPC_SUBNET_ID }}"
           assign_public_ip: no
