@@ -9,7 +9,7 @@
           auth:
             aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
             aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
-            aws_ec2_region: "{{ REGION }}"
+            region: "{{ REGION }}"
           key_name: KEY_NAME
           instance_type: t2.micro
           image: EC2_IMAGE
