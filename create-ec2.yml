@@ -12,6 +12,6 @@
           wait: yes
           count: 1
           vpc_subnet_id: "{{ VPC_SUBNET_ID }}"
-          assign_public_ip: no
+          assign_public_ip: yes
           instance_tags:
             Name: via-ansible-tower
