@@ -1,0 +1,12 @@
+---
+  - name: Stop up EC2 instance
+    hosts: local
+    connection: local
+ 
+    tasks:
+      - name: Stop up the ec2 instance
+        ec2:
+          instance_id:  i-0d6cd87144bebebe5
+          region: us-east-2
+          wait: yes
+          state: stop
