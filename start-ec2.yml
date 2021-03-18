@@ -6,7 +6,7 @@
     tasks:
       - name: Start up the ec2 instance
         ec2:
-          instance_id:  i-0d6cd87144bebebe5
-          region: us-east-2
+          instance_id:  "{{ INSTANCE_ID }}"
+          region: "{{ REGION }}"
           wait: yes
-          state: start
+          state: running
