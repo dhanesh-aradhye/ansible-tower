@@ -1,6 +1,7 @@
 ---
 - name: Hello World!
   hosts: 18.222.167.69
+  aws_access_key: aws-instance-ansible
 
   tasks:
 
